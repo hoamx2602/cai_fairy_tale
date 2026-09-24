@@ -114,6 +114,35 @@ export const bubbleSeaStory = {
   ]
 };
 
+export const talkingBackpackStory = {
+  id: 'talking-backpack-city',
+  seriesNumber: '05',
+  title: 'Cải và Thành Phố Ba Lô Nói Chuyện',
+  shortTitle: 'Thành Phố Ba Lô Nói Chuyện',
+  kicker: 'Tập 05 · Truyện cổ tích cho Cải',
+  summary: 'Cải và Ô Tô Gió Lốc lạc vào khu phố ba lô thích buôn chuyện, rồi phải dùng sự sáng tạo và khéo léo để vượt qua Ngõ Đồ Dùng Cáu Kỉnh.',
+  age: '4–8 tuổi',
+  readTime: '8–12 phút',
+  themes: ['Sáng tạo', 'Khéo léo', 'Can đảm'],
+  pages: [
+    { image:'assets/stories/talking-backpack-city/page-01.webp', title:'Cải và Thành Phố Ba Lô Nói Chuyện', subtitle:'Tập 05 · Truyện cổ tích cho Cải', narration:'', dialogue:[], voice:'Rộn ràng, hài hước và đầy tiếng rì rầm như một khu phố đang thức giấc.', alt:'Cải và Ô Tô Gió Lốc đứng giữa thành phố ba lô, phía xa là Đồi Bút Chì Ánh Sáng.' },
+    { image:'assets/stories/talking-backpack-city/page-02.webp', narration:'Sau khi thoát khỏi Biển Bong Bóng, Cải cùng Ô Tô Gió Lốc xuyên qua cánh cổng phát sáng kỳ lạ.', dialogue:[{who:'Cải',text:'Bám chắc nhé, Gió Lốc!'},{who:'Âm thanh',text:'Vùùù… ẦM!'}], voice:'Bay bổng ở đầu trang, tăng tốc rồi kết bằng một tiếng “ầm” tròn và mềm.', alt:'Cải và Ô Tô Gió Lốc bay qua đường hầm sáng hướng về Thành Phố Ba Lô.' },
+    { image:'assets/stories/talking-backpack-city/page-03.webp', narration:'Cả hai rơi bịch xuống một con đường toàn ba lô biết đi, biết nói và biết buôn chuyện.', dialogue:[{who:'Ô Tô Gió Lốc',text:'Hạ cánh thành công… theo cách hơi ê bánh!'},{who:'Các ba lô',text:'Ai rơi xuống thế? Nhóc con kia từ đâu tới vậy?'}], voice:'Tiếng rơi mềm; đám đông rì rầm nhanh, vui và không ồn quá.', alt:'Cải và Ô Tô Gió Lốc ngồi giữa đường, xung quanh là những ba lô cư dân tò mò.' },
+    { image:'assets/stories/talking-backpack-city/page-04.webp', narration:'Một chiếc ba lô màu hồng ghé sát bạn mình, lẩm bẩm vừa đủ để… cả phố cùng nghe.', dialogue:[{who:'Ba lô hồng',text:'Trời ơi, lại có người rơi xuống! Hôm trước là cái dép, hôm nay là nhóc con với ô tô biết nhảy breakdance!'},{who:'Ô Tô Gió Lốc',text:'Tớ chỉ nhún bánh chào mọi người thôi mà!'}], voice:'Ba lô hồng lanh lảnh và nhiều chuyện; Gió Lốc ngượng nhưng đáng yêu.', alt:'Ba lô hồng buôn chuyện trong khi Ô Tô Gió Lốc vẫy đuôi xe chào cả phố.' },
+    { image:'assets/stories/talking-backpack-city/page-05.webp', narration:'Ô Tô Gió Lốc hỏi đường. Cả khu phố bỗng im bặt, những dây kéo đồng loạt khép lại: “Rẹt!”', dialogue:[{who:'Ô Tô Gió Lốc',text:'Bọn mình đi tìm cánh cổng dẫn tới viên Pin Ánh Sáng!'},{who:'Các ba lô',text:'Suỵt! Ai cũng tìm Pin Ánh Sáng… nhưng chưa ai đi qua được con ngõ ấy.'}], voice:'Gió Lốc rõ và lịch sự; đám đông hạ giọng bí mật ở nửa sau.', alt:'Cải và Ô Tô Gió Lốc hỏi về Pin Ánh Sáng khiến đám đông ba lô im lặng.' },
+    { image:'assets/stories/talking-backpack-city/page-06.webp', narration:'Ba lô đỏ kéo Cải lại gần và chỉ về một con ngõ hẹp ở cuối phố.', dialogue:[{who:'Ba lô đỏ',text:'Muốn tới đó phải qua Ngõ Đồ Dùng Cáu Kỉnh!'},{who:'Cải',text:'Đồ dùng mà cũng cáu ạ?'},{who:'Ba lô đỏ',text:'Có Kéo Biết Cắn, Thước Dẻo Bắn Tanh Tách và Đèn Pin Thét Gắt!'}], voice:'Thì thầm bí hiểm, nhưng nhấn tên từng đồ dùng theo cách dí dỏm.', alt:'Ba lô đỏ cảnh báo Cải về chiếc kéo, thước dẻo và đèn pin trong ngõ.' },
+    { image:'assets/stories/talking-backpack-city/page-07.webp', narration:'Cải vừa bước vào ngõ thì “xoẹt!” — một chiếc kéo khổng lồ lao ra, chặn kín lối.', dialogue:[{who:'Kéo Biết Cắn',text:'Không giấy thì không qua!'},{who:'Cải',text:'Giấy thì có. Nhưng để Cải nghĩ đã…'}], voice:'Kéo cộc lốc nhưng không đáng sợ; Cải bình tĩnh và tò mò.', alt:'Chiếc Kéo Biết Cắn chặn Cải và Ô Tô Gió Lốc trong con ngõ hẹp.' },
+    { image:'assets/stories/talking-backpack-city/page-08.webp', narration:'Cải rút tờ bản đồ, gấp bên này, bẻ bên kia. Chỉ một lát, tờ giấy đã biến thành một con rồng sáng lấp lánh.', dialogue:[{who:'Cải',text:'Giấy đây! Nhưng là Rồng!'},{who:'Kéo Biết Cắn',text:'Ối! Ta chỉ biết cắn giấy phẳng thôi!'}], voice:'Nhịp gấp giấy nhanh; câu của Cải như màn trình diễn, câu của Kéo đầy hoảng hốt hài hước.', alt:'Cải giơ con rồng giấy phát sáng khiến chiếc kéo giật mình né sang bên.' },
+    { image:'assets/stories/talking-backpack-city/page-09.webp', narration:'Qua được chiếc kéo, một cây Thước Dẻo bật thẳng dậy rồi uốn mình thành dây nhảy.', dialogue:[{who:'Thước Dẻo',text:'Muốn đi tiếp, phải nhảy dây năm lần không vấp!'},{who:'Cải',text:'Năm lần à? Cải thử luôn!'}], voice:'Thước nghiêm như trọng tài; Cải nhận lời nhanh và hào hứng.', alt:'Thước Dẻo uốn thành dây nhảy trước Cải và Ô Tô Gió Lốc.' },
+    { image:'assets/stories/talking-backpack-city/page-10.webp', narration:'Một, hai, ba, bốn, năm! Cải nhảy như kangaroo. Ô Tô Gió Lốc nhún bánh quay dây giúp bạn.', dialogue:[{who:'Ô Tô Gió Lốc',text:'Vòng cuối — bật cao!'},{who:'Thước Dẻo',text:'Đạt yêu cầu… giờ cho ta ngủ một cuộn.'}], voice:'Đếm đều rồi nhanh dần; kết chậm và ngái ngủ.', alt:'Cải hoàn thành năm lần nhảy trong khi Ô Tô Gió Lốc giúp quay Thước Dẻo.' },
+    { image:'assets/stories/talking-backpack-city/page-11.webp', narration:'Cuối ngõ, một chiếc Đèn Pin đỏ chống nạnh trước cánh cửa khoá chặt.', dialogue:[{who:'Đèn Pin Thét Gắt',text:'Soi ánh sáng vào mặt ta nếu tim ngươi trong sáng!'},{who:'Cải',text:'Nhưng đèn thì phải soi cho người khác chứ?'}], voice:'Đèn Pin to và kịch tính; Cải hỏi thật thà, hơi tinh nghịch.', alt:'Đèn Pin Thét Gắt chặn cánh cửa trong khi Cải cầm chiếc gương nhỏ.' },
+    { image:'assets/stories/talking-backpack-city/page-12.webp', narration:'Cải nghiêng chiếc gương, đón một tia nắng rồi phản chiếu thẳng vào Đèn Pin. Ánh sáng tung ra bảy sắc lung linh.', dialogue:[{who:'Đèn Pin Thét Gắt',text:'Hắt… HẮT XÌ! Sáng quá! Được rồi, ta cho qua!'},{who:'Cải',text:'Cảm ơn nhé. Lần sau chú nói nhỏ hơn một chút nha!'}], voice:'Tạo khoảng dừng trước cú hắt xì lớn; sau đó dịu và ấm.', alt:'Cải dùng gương phản chiếu cầu vồng khiến Đèn Pin hắt xì và mở cửa.' },
+    { image:'assets/stories/talking-backpack-city/page-13.webp', narration:'Cánh cửa cuối ngõ từ từ mở ra. Phía sau là Đồi Bút Chì Ánh Sáng, nơi một cây bút khổng lồ đang toả sáng như mặt trời nhỏ.', dialogue:[{who:'Ô Tô Gió Lốc',text:'Máy quét xác nhận: đẹp đến lóa cả đèn pha!'},{who:'Cải',text:'Bút Chì Thần ở trên đỉnh đồi!'}], voice:'Mở rộng, kỳ diệu; cho một nhịp ngắm cảnh trước lời thoại.', alt:'Cải và Ô Tô Gió Lốc bước qua cổng, nhìn thấy Bút Chì Thần phát sáng trên đỉnh đồi.' },
+    { image:'assets/stories/talking-backpack-city/page-14.webp', narration:'Cải nhìn Ô Tô Gió Lốc, giơ một ngón tay. Ngay dưới chân, những viên sỏi bỗng nhảy lách cách.', dialogue:[{who:'Cải',text:'Sắp tới rồi. Chỉ còn một thử thách cuối!'},{who:'Ô Tô Gió Lốc',text:'Ừm… tớ nghĩ thử thách đang chạy tới thì đúng hơn.'}], voice:'Cải tự tin; hạ giọng ở tiếng sỏi rồi để Gió Lốc nói khẽ đầy nghi ngờ.', alt:'Cải giơ một ngón tay bên Ô Tô Gió Lốc khi mặt đất dưới Đồi Bút Chì bắt đầu rung.' },
+    { image:'assets/stories/talking-backpack-city/page-15.webp', narration:'“RẦM! RẦM!” Đất rung chuyển. Sâu Thối Bủm xuất hiện trên một đôi giày thể thao khổng lồ biết chạy và… xì hơi tăng tốc!', dialogue:[{who:'Sâu Thối Bủm',text:'Không nhanh bằng sâu thì đừng hòng chạm tới ánh sáng!'},{who:'Cải',text:'Gió Lốc, chuẩn bị đua!'},{who:'Lời kể',text:'Cuộc Đua Bút Chì Ánh Sáng sắp bắt đầu…'}], voice:'Sâu khoe khoang thật hài; Cải dứt khoát; câu cuối chậm lại như một cliffhanger.', alt:'Sâu Thối Bủm cưỡi đôi giày khổng lồ lao tới trước Cải và Ô Tô Gió Lốc.' }
+  ]
+};
+
 export const fireflyStory = {
   id: 'firefly-light',
   title: 'Cải và Đêm Đom Đóm Mất Sáng',
@@ -142,7 +171,7 @@ export const fireflyStory = {
 };
 
 export const comingSoon = [
-  { number: '05', title: 'Thành Phố Ba Lô Nổi Chuyện', note: 'Một bí mật mới đang thức giấc', color: 'amber', icon: '🍎' }
+  { number: '06', title: 'Cuộc Đua Bút Chì Ánh Sáng', note: 'Thử thách cuối trên Đồi Bút Chì', color: 'amber', icon: '✏️' }
 ];
 
-export const stories = [backpackStory, skyRaceStory, lazyForestStory, bubbleSeaStory, fireflyStory];
+export const stories = [backpackStory, skyRaceStory, lazyForestStory, bubbleSeaStory, talkingBackpackStory, fireflyStory];

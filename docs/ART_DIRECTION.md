@@ -52,3 +52,11 @@ PNG tạo ban đầu được chuyển sang WebP chất lượng 84; cả 15 tra
 15 tranh tại `assets/stories/bubble-sea/page-01.webp` đến `page-15.webp` được tạo bằng imagegen tích hợp. Bảng màu dùng xanh ngọc phát sáng, cobalt, vàng ngọc trai và san hô hồng. Trang phục lặn cá heo của Cải và Ô Tô Bơi Bong Bóng được giữ xuyên suốt; cung điện dùng các vòm bong bóng trong suốt và khung vàng.
 
 Hài hước đến từ rap, trò chơi bong bóng, nước hoa hành phi và cú hắt xì. Cá mập có hình tròn, biểu cảm thân thiện và áo mưa vàng; cao trào đưa Sâu Thối Bủm về bờ trong bong bóng bảo vệ, không có thương tích. PNG được chuyển sang WebP chất lượng 84; cả 15 trang chiếm khoảng 5 MB. Chi tiết sản xuất nằm trong `docs/STORY_BUBBLE_SEA.md`.
+
+## Bộ tranh “Thành Phố Ba Lô Nói Chuyện”
+
+15 tranh tại `assets/stories/talking-backpack-city/page-01.webp` đến `page-15.webp` được tạo bằng imagegen tích hợp. Thành phố nối tiếp hệ hình khối ba lô của Tập 01 nhưng đông vui và giàu biểu cảm hơn, với bảng màu cobalt, vàng nắng, đỏ san hô và hồng kẹo. Ô Tô Gió Lốc giữ thiết kế ngôi sao vàng và bánh turbine xanh để nối hình ảnh xuyên series.
+
+Ba thử thách trong Ngõ Đồ Dùng Cáu Kỉnh dùng hình thể tròn và biểu cảm sân khấu để tạo căng thẳng vui: Kéo Biết Cắn bị rồng giấy làm giật mình, Thước Dẻo trở thành dây nhảy, Đèn Pin Thét Gắt hắt xì trước cầu vồng. Tập kết bằng Sâu Thối Bủm cưỡi giày thể thao khổng lồ với luồng tăng tốc xanh bạc hà, mở sang cuộc đua ở Tập 06.
+
+PNG được chuyển sang WebP chất lượng 84; cả 15 trang chiếm khoảng 4,4 MB. Kịch bản và chỉ dẫn lồng tiếng nằm trong `docs/STORY_TALKING_BACKPACK_CITY.md`.
