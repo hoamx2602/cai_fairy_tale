@@ -46,3 +46,9 @@ PNG tạo ban đầu được chuyển sang WebP chất lượng 84; cả 15 tra
 Các cảnh được khoá theo tuyến nhân vật: Thị trưởng Dây Kéo rời truyện ở trang 4; Sên Dài Cổ xuất hiện tại thử thách câu đố; Sâu Thối Bủm chỉ xuất hiện ở khu vực kho báu. Khói ru ngủ là các xoắn xanh ngọc có biểu tượng trăng, sao và gối; hố gối ở cao trào bảo đảm cú ngã hoàn toàn mềm và an toàn.
 
 PNG tạo ban đầu được chuyển sang WebP chất lượng 84; cả 15 trang chiếm khoảng 3,9 MB. Mô tả sản xuất và nhịp truyện nằm trong `docs/STORY_LAZY_FOREST.md`.
+
+## Bộ tranh “Bí Ẩn Biển Bong Bóng”
+
+15 tranh tại `assets/stories/bubble-sea/page-01.webp` đến `page-15.webp` được tạo bằng imagegen tích hợp. Bảng màu dùng xanh ngọc phát sáng, cobalt, vàng ngọc trai và san hô hồng. Trang phục lặn cá heo của Cải và Ô Tô Bơi Bong Bóng được giữ xuyên suốt; cung điện dùng các vòm bong bóng trong suốt và khung vàng.
+
+Hài hước đến từ rap, trò chơi bong bóng, nước hoa hành phi và cú hắt xì. Cá mập có hình tròn, biểu cảm thân thiện và áo mưa vàng; cao trào đưa Sâu Thối Bủm về bờ trong bong bóng bảo vệ, không có thương tích. PNG được chuyển sang WebP chất lượng 84; cả 15 trang chiếm khoảng 5 MB. Chi tiết sản xuất nằm trong `docs/STORY_BUBBLE_SEA.md`.

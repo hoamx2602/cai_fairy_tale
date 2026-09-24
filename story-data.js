@@ -85,6 +85,35 @@ export const lazyForestStory = {
   ]
 };
 
+export const bubbleSeaStory = {
+  id: 'bubble-sea',
+  seriesNumber: '04',
+  title: 'Cải và Bí Ẩn Biển Bong Bóng',
+  shortTitle: 'Bí Ẩn Biển Bong Bóng',
+  kicker: 'Tập 04 · Truyện cổ tích cho Cải',
+  summary: 'Dưới Biển Bong Bóng, Cải phải rap cùng đàn cá, đấu trí với Vua Cá Mặt Cười và giữ mảnh bản đồ khỏi một màn cướp bóc thơm mùi hành phi.',
+  age: '4–8 tuổi',
+  readTime: '8–12 phút',
+  themes: ['Tự tin', 'Thông minh', 'Hài hước'],
+  pages: [
+    { image:'assets/stories/bubble-sea/page-01.webp', title:'Cải và Bí Ẩn Biển Bong Bóng', subtitle:'Tập 04 · Truyện cổ tích cho Cải', narration:'', dialogue:[], voice:'Rộn ràng như mở màn một buổi diễn dưới biển.', alt:'Cải lái Ô Tô Bơi Bong Bóng tới cung điện, giữa cá rapper, bạch tuộc DJ và Sâu Thối Bủm.' },
+    { image:'assets/stories/bubble-sea/page-02.webp', narration:'Cải khoác áo lặn ma thuật, đội mũ kính cá heo rồi nhảy phốc lên xe. Ô Tô Gió Lốc lập tức bung vây và mái vòm bong bóng.', dialogue:[{who:'Ô Tô Gió Lốc',text:'Biến hình hoàn tất: Ô Tô Bơi Bong Bóng!'},{who:'Cải',text:'Xuống biển thôi!'}], voice:'Có tiếng cơ khí lách cách và tiếng “boong” tròn của mái vòm.', alt:'Cải mặc đồ lặn cá heo ngồi lên Ô Tô Bơi Bong Bóng bên cổng biển.' },
+    { image:'assets/stories/bubble-sea/page-03.webp', narration:'Cả hai lặn xuống biển sâu. Những tia nắng nhảy múa giữa san hô, cá đuối và hàng nghìn bong bóng lấp lánh.', dialogue:[{who:'Cải',text:'Ồ! Ở đây sáng như cả bầu trời rơi xuống biển!' }], voice:'Chậm, mở rộng và đầy kinh ngạc.', alt:'Cải lái Ô Tô Bơi Bong Bóng giữa cá, cá đuối và những rạn san hô rực rỡ.' },
+    { image:'assets/stories/bubble-sea/page-04.webp', narration:'Một chú cá vàng đeo kính râm, đội mũ xanh và cầm micro vỏ sò bơi ra chặn đường.', dialogue:[{who:'Cá Rapper',text:'Yo yo yo, ai đây xuống biển?'}], voice:'Có nhịp beat vui, giọng cá tự tin và thân thiện.', alt:'Cá vàng rapper đeo kính râm biểu diễn trước Cải và đàn cá dưới biển.' },
+    { image:'assets/stories/bubble-sea/page-05.webp', narration:'Cải đặt một tay lên ngực, tay kia búng theo nhịp. Ô Tô Bơi Bong Bóng cũng nháy đèn theo beat.', dialogue:[{who:'Cải',text:'Là ta — Cải siêu hạng, đến tìm bản đồ, không thèm uống nước lọc!'}], voice:'Rap rõ chữ, nghịch ngợm; kết bằng tiếng đàn cá “ồ” lên.', alt:'Cải rap đáp lại cá vàng trong tiếng reo của đàn cá.' },
+    { image:'assets/stories/bubble-sea/page-06.webp', narration:'Đàn cá gật gù rồi cùng thổi một vòng cổng bong bóng khổng lồ. Phía sau là Cung Điện Bong Bóng sáng rực.', dialogue:[{who:'Cá Rapper',text:'Vần hay! Mời nhà thám hiểm vào cung điện!'}], voice:'Rộn ràng, có tiếng bong bóng nối nhau lốp bốp.', alt:'Cải lái xe qua cổng bong bóng cầu vồng tới cung điện dưới biển.' },
+    { image:'assets/stories/bubble-sea/page-07.webp', narration:'Trong cung điện, mọi thứ đều nổ lốp bốp khi chạm vào. Bạch Tuộc DJ xoay đĩa còn Sứa Nhảy Nhót tung tăng.', dialogue:[{who:'Cải',text:'Ở đây đi nhẹ cũng thành… biểu diễn!'},{who:'Ô Tô Bơi',text:'Lốp! Bốp! Xin chào quý vị!'}], voice:'Như một bữa tiệc, thêm tiếng lốp bốp theo nhịp nhạc.', alt:'Cải đi qua bữa tiệc trong Cung Điện Bong Bóng cùng bạch tuộc DJ và sứa nhảy.' },
+    { image:'assets/stories/bubble-sea/page-08.webp', narration:'Giữa cung điện là Vua Cá Mặt Cười. Ngài đang chơi cờ cá ngựa với chính mình — và bên nào cũng đòi thắng.', dialogue:[{who:'Vua Cá',text:'A ha! Một đối thủ mới! Ta bắt đầu chán thắng chính ta rồi.'}], voice:'Vua Cá sang sảng, vui và hơi tự mãn.', alt:'Vua Cá Mặt Cười đội vương miện chơi cờ cá ngựa khi Cải tới chào.' },
+    { image:'assets/stories/bubble-sea/page-09.webp', narration:'Vua Cá đặt hai bong bóng trong suốt lên bàn ngọc trai.', dialogue:[{who:'Vua Cá',text:'Muốn lấy mảnh bản đồ, cháu phải thắng trò Thả Bong Bóng Trí Tuệ!'},{who:'Cải',text:'Cháu sẵn sàng!'}], voice:'Trang trọng vừa đủ, rồi Cải đáp tự tin.', alt:'Cải và Vua Cá đứng hai bên bàn ngọc trai chuẩn bị thử thách bong bóng trí tuệ.' },
+    { image:'assets/stories/bubble-sea/page-10.webp', narration:'Câu đố vang lên: “Con gì đêm ngủ lặng thinh, sáng dậy bỗng kêu tinh tinh?” Cải lập tức thổi một bong bóng đáp án.', dialogue:[{who:'Cải',text:'Chuông báo thức!'},{who:'Lời kể',text:'Bụp! Bong bóng của Vua Cá nổ trước vì ngài nghĩ mãi chưa ra.'}], voice:'Đọc câu đố có nhịp; Cải trả lời nhanh, tiếng “bụp” mềm và hài.', alt:'Bong bóng của Cải hiện chiếc chuông báo thức, còn bong bóng của Vua Cá vừa nổ.' },
+    { image:'assets/stories/bubble-sea/page-11.webp', narration:'Vua Cá cười vang và vỗ hai chiếc vây. Một mảnh bản đồ tím sáng bay từ vương miện xuống tay Cải.', dialogue:[{who:'Vua Cá',text:'Quá hay! Đây là phần thưởng: mảnh bản đồ thứ ba!'}], voice:'Ấm áp, vui mừng, có tiếng cả cung điện reo hò.', alt:'Vua Cá trao mảnh Bản Đồ Vũ Trụ thứ ba cho Cải trước đám đông vỗ tay.' },
+    { image:'assets/stories/bubble-sea/page-12.webp', narration:'Ngay khi Cải chạm vào bản đồ, mặt biển rung lên. Sâu Thối Bủm phóng tới trên một con cá mập mặc áo mưa, tay xịt nước hoa mùi hành phi.', dialogue:[{who:'Sâu Thối Bủm',text:'Cải ơiiii, đừng vội vui! Đưa bản đồ đây!'},{who:'Cải',text:'Lại là chú nữa à?'}], voice:'Sâu thật kịch tính nhưng ngớ ngẩn; nhấn vui ở “mùi hành phi”.', alt:'Sâu Thối Bủm cưỡi cá mập áo mưa, cầm bình nước hoa và đòi bản đồ của Cải.' },
+    { image:'assets/stories/bubble-sea/page-13.webp', narration:'Cải nhét mảnh bản đồ vào ba lô rồi bấm nút vàng. Bốn bánh xe xoay ngang, sủi lên hàng nghìn bong bóng.', dialogue:[{who:'Cải',text:'Kích hoạt Bánh Xe Sủi Bọt!'},{who:'Ô Tô Bơi',text:'Xoáy bong bóng sẵn sàng!'}], voice:'Khẩu lệnh dứt khoát; âm thanh xoáy nước tăng dần.', alt:'Bánh xe Ô Tô Bơi xoay thành turbine bong bóng quanh Sâu Thối Bủm và cá mập.' },
+    { image:'assets/stories/bubble-sea/page-14.webp', narration:'Xoáy nước cuốn Sâu vào một đống bọt xà phòng trên bụng cá mập. Mùi hành phi làm cá mập hắt xì thật to — “HẮT XÌ!”', dialogue:[{who:'Lời kể',text:'Sâu Thối Bủm bay vèo về bờ trong một bong bóng bảo vệ, hoàn toàn an toàn.'},{who:'Sâu Thối Bủm',text:'Lần sau ta sẽ dùng mùi… bánh mì bơ tỏi!'}], voice:'Nhanh, có tiếng hắt xì tròn và kết bằng câu dọa thật buồn cười.', alt:'Cá mập hắt xì, đẩy Sâu Thối Bủm bay an toàn về bờ trong bong bóng.' },
+    { image:'assets/stories/bubble-sea/page-15.webp', narration:'Ba mảnh bản đồ tự bay lên và ghép lại. Một cánh cổng bí mật hiện ra giữa Thành Phố Ba Lô — nơi mọi vật đều sống động và biết nói.', dialogue:[{who:'Cải',text:'Thành Phố Ba Lô, tụi mình đến đây!'},{who:'Lời kể',text:'Cải hít một hơi thật sâu, mỉm cười rồi lái xe về phía cánh cổng sáng.'}], voice:'Bí ẩn ở hình cánh cổng, rồi kết tự tin và ấm áp.', alt:'Ba mảnh bản đồ mở hình chiếu cánh cổng Thành Phố Ba Lô trước Cải và các bạn dưới biển.' }
+  ]
+};
+
 export const fireflyStory = {
   id: 'firefly-light',
   title: 'Cải và Đêm Đom Đóm Mất Sáng',
@@ -113,8 +142,7 @@ export const fireflyStory = {
 };
 
 export const comingSoon = [
-  { number: '04', title: 'Bí Ẩn Biển Bong Bóng', note: 'Những bí mật dưới làn nước', color: 'teal', icon: '🫧' },
   { number: '05', title: 'Thành Phố Ba Lô Nổi Chuyện', note: 'Một bí mật mới đang thức giấc', color: 'amber', icon: '🍎' }
 ];
 
-export const stories = [backpackStory, skyRaceStory, lazyForestStory, fireflyStory];
+export const stories = [backpackStory, skyRaceStory, lazyForestStory, bubbleSeaStory, fireflyStory];

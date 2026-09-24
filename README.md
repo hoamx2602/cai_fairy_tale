@@ -1,6 +1,6 @@
 # Chuyện của Cải
 
-Thư viện truyện tranh toàn màn hình dành riêng cho Cải. Series hiện có **Thành Phố Ba Lô**, **Cuộc Đua Xe Bay Trên Lồng Mây** và **Cuộc Thám Hiểm Rừng Lười Biếng**, mỗi tập 15 trang, cùng ngoại truyện **Đêm Đom Đóm Mất Sáng** (14 trang). Mỗi truyện có hiệu ứng lật trang 3D, kịch bản lồng tiếng theo từng trang và cơ chế nạp file audio để nghe thử ngay trong trình duyệt.
+Thư viện truyện tranh toàn màn hình dành riêng cho Cải. Series hiện có bốn tập: **Thành Phố Ba Lô**, **Cuộc Đua Xe Bay Trên Lồng Mây**, **Cuộc Thám Hiểm Rừng Lười Biếng** và **Bí Ẩn Biển Bong Bóng**, mỗi tập 15 trang, cùng ngoại truyện **Đêm Đom Đóm Mất Sáng** (14 trang).
 
 ## Chạy tại máy
 
@@ -33,11 +33,13 @@ Tạo thư mục `assets/audio/firefly/`, đặt các file theo trang, rồi b�
 - `docs/STORY_BACKPACK_CITY.md`: kịch bản sản xuất Tập 01 theo 15 trang.
 - `docs/STORY_SKY_RACE.md`: kịch bản sản xuất Tập 02 theo 15 trang.
 - `docs/STORY_LAZY_FOREST.md`: kịch bản sản xuất Tập 03 theo 15 trang.
+- `docs/STORY_BUBBLE_SEA.md`: kịch bản sản xuất Tập 04 theo 15 trang.
 - `docs/STORY_01_SCRIPT.md`: kịch bản ngoại truyện Đom Đóm theo 14 trang.
 - `docs/CAI_CHARACTER.md`: hồ sơ tính cách gốc của Cải.
 - `assets/stories/backpack-city/`: 15 tranh WebP của Thành Phố Ba Lô.
 - `assets/stories/sky-race/`: 15 tranh WebP của Cuộc Đua Xe Bay.
 - `assets/stories/lazy-forest/`: 15 tranh WebP của Rừng Lười Biếng.
+- `assets/stories/bubble-sea/`: 15 tranh WebP của Biển Bong Bóng.
 - `assets/stories/firefly/`: 14 tranh WebP của ngoại truyện Đom Đóm.
 - `app.js`, `styles.css`: thư viện truyện, trình đọc, lật trang, kịch bản và audio preview.
 
