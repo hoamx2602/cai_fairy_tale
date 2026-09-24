@@ -38,3 +38,11 @@ PNG tạo ban đầu được chuyển sang WebP chất lượng 84; cả 15 tra
 Prompt chung yêu cầu tranh truyện thiếu nhi 3D điện ảnh tỉ lệ 3:2, ánh sáng ban ngày trong trẻo, biểu cảm rõ, cảm giác tốc độ vui, không chữ trong ảnh và dành vùng yên ở phần dưới cho lớp chữ HTML. Các cảnh nguy hiểm đều có đệm mây an toàn; khói hôi dùng hình xoắn xanh ngọc, không có chất bẩn hoặc hình ảnh ghê. Mô tả cảnh và chỉ dẫn giọng từng trang nằm trong `docs/STORY_SKY_RACE.md`.
 
 PNG tạo ban đầu được chuyển sang WebP chất lượng 84; cả 15 trang chiếm khoảng 3 MB trong dự án để việc chuyển trang vẫn mượt trên trình duyệt.
+
+## Bộ tranh “Cuộc Thám Hiểm Rừng Lười Biếng”
+
+15 tranh tại `assets/stories/lazy-forest/page-01.webp` đến `page-15.webp` được tạo bằng imagegen tích hợp. Bộ tranh giữ Cải và Ô Tô Gió Lốc từ các tập trước, dùng chất liệu vải chần bông, gối mềm, võng lá và ánh nắng mật ong để biến sự buồn ngủ thành một thế giới hài hước thay vì u ám.
+
+Các cảnh được khoá theo tuyến nhân vật: Thị trưởng Dây Kéo rời truyện ở trang 4; Sên Dài Cổ xuất hiện tại thử thách câu đố; Sâu Thối Bủm chỉ xuất hiện ở khu vực kho báu. Khói ru ngủ là các xoắn xanh ngọc có biểu tượng trăng, sao và gối; hố gối ở cao trào bảo đảm cú ngã hoàn toàn mềm và an toàn.
+
+PNG tạo ban đầu được chuyển sang WebP chất lượng 84; cả 15 trang chiếm khoảng 3,9 MB. Mô tả sản xuất và nhịp truyện nằm trong `docs/STORY_LAZY_FOREST.md`.

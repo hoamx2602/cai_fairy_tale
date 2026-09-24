@@ -56,6 +56,35 @@ export const skyRaceStory = {
   ]
 };
 
+export const lazyForestStory = {
+  id: 'lazy-forest',
+  seriesNumber: '03',
+  title: 'Cải và Cuộc Thám Hiểm Rừng Lười Biếng',
+  shortTitle: 'Cuộc Thám Hiểm Rừng Lười Biếng',
+  kicker: 'Tập 03 · Truyện cổ tích cho Cải',
+  summary: 'Để tìm mảnh Bản Đồ Vũ Trụ thứ hai, Cải phải vượt qua một khu rừng nơi cả cây cối, chim chóc và mặt trời đều chỉ muốn ngủ.',
+  age: '4–8 tuổi',
+  readTime: '8–12 phút',
+  themes: ['Tỉnh táo', 'Kiên trì', 'Nhanh trí'],
+  pages: [
+    { image:'assets/stories/lazy-forest/page-01.webp', title:'Cải và Cuộc Thám Hiểm Rừng Lười Biếng', subtitle:'Tập 03 · Truyện cổ tích cho Cải', narration:'', dialogue:[], voice:'Mơ màng nhưng vui, mở đầu một nơi kỳ lạ.', alt:'Cải và Ô Tô Gió Lốc bay vào khu rừng nơi cây cối, chim và mặt trời đều đang ngủ.' },
+    { image:'assets/stories/lazy-forest/page-02.webp', narration:'Cải vừa nhận mảnh bản đồ đầu tiên thì Thị trưởng Dây Kéo gõ lên ba lô tên lửa. “Vút!” Cả hai bay thẳng về hướng Tây Nam.', dialogue:[{who:'Thị trưởng',text:'Điểm đến: Rừng Lười Biếng! Nhớ mang theo thật nhiều… tỉnh táo!'}], voice:'Nhanh ở tiếng “vút”, vui và phiêu lưu.', alt:'Cải, Ô Tô Gió Lốc và Thị trưởng Dây Kéo bay về phía khu rừng dưới mây.' },
+    { image:'assets/stories/lazy-forest/page-03.webp', narration:'Vừa hạ cánh, Cải đã thấy cây cối nằm ngủ, chim ngồi võng ngáp dài, thậm chí mặt trời cũng đeo kính đen nằm trên võng mây.', dialogue:[{who:'Cải',text:'Ủa? Vậy ai trông rừng?'}], voice:'Liệt kê chậm và buồn ngủ, rồi Cải hỏi đầy ngạc nhiên.', alt:'Cải ngạc nhiên giữa khu rừng có cây ngủ, chim nằm võng và mặt trời đeo kính.' },
+    { image:'assets/stories/lazy-forest/page-04.webp', narration:'Thị trưởng Dây Kéo ngáp một cái rõ to. Tên lửa vô tình bật lên và đưa chú bay mất hút.', dialogue:[{who:'Thị trưởng',text:'Không ai trông hết, vì ai cũng… lười trông!'},{who:'Cải',text:'Chú Thị trưởng ơi—!'}], voice:'Kéo dài chữ “lười”, rồi kết bằng tiếng tên lửa hài hước.', alt:'Thị trưởng Dây Kéo vừa ngáp vừa bay khỏi khu rừng, để Cải và Ô Tô Gió Lốc ở lại.' },
+    { image:'assets/stories/lazy-forest/page-05.webp', narration:'Cải và Ô Tô Gió Lốc bước vào rừng. Lối mòn bỗng phồng lên thành một tấm thảm ngủ massage mềm ơi là mềm.', dialogue:[{who:'Ô Tô Gió Lốc',text:'Cảnh báo: Con đường này êm quá mức cho phép!'},{who:'Cải',text:'Cải… vẫn… đi… tiếp!'}], voice:'Nhịp chậm như buồn ngủ; câu cuối cố gắng và quyết tâm.', alt:'Cải cố bước trên con đường biến thành thảm ngủ mềm, bên cạnh Ô Tô Gió Lốc.' },
+    { image:'assets/stories/lazy-forest/page-06.webp', narration:'Cây kẹo cao su rung cành, bắn ra những bong bóng ru ngủ có gối bay bên trong.', dialogue:[{who:'Cải',text:'Gió Lốc, bật quạt lên!'},{who:'Ô Tô Gió Lốc',text:'Chế độ thổi bay cơn ngáp!'}], voice:'Nhanh và tinh nghịch như trò né bong bóng.', alt:'Cải và Ô Tô Gió Lốc dùng quạt tránh những bong bóng ru ngủ từ cây kẹo cao su.' },
+    { image:'assets/stories/lazy-forest/page-07.webp', narration:'Trước cây cầu gỗ, một chú Sên Dài Cổ chặn đường. Chú nói chậm đến mức một chiếc lá kịp rơi xuống rồi mọc cây mới.', dialogue:[{who:'Sên Dài Cổ',text:'Muốn… qua… phải… trả… lời… câu… đố… đã…'}], voice:'Sên thật chậm, có khoảng nghỉ dài nhưng vẫn hài.', alt:'Sên Dài Cổ vỏ tím chặn cây cầu trong khi Cải và Ô Tô Gió Lốc cố không ngáp.' },
+    { image:'assets/stories/lazy-forest/page-08.webp', narration:'Cải cắn một miếng bánh mì để tỉnh táo. Sên vừa hỏi xong, cậu đã giơ tay thật nhanh.', dialogue:[{who:'Sên Dài Cổ',text:'Con gì không biết bay mà vẫn bay mỗi sáng?'},{who:'Cải',text:'Cánh cửa nhà vệ sinh!'},{who:'Lời kể',text:'Sên không biết đúng hay sai, nhưng cũng lười phản đối nên cho đi luôn.'}], voice:'Cải trả lời thật nhanh; chừa một nhịp im lặng trước vẻ mặt ngơ ngác của Sên.', alt:'Cải giơ tay trả lời trong khi Sên Dài Cổ ngơ ngác rồi lười biếng cho qua.' },
+    { image:'assets/stories/lazy-forest/page-09.webp', narration:'Sâu trong rừng, Cải tìm thấy một căn chòi gỗ. Biểu tượng mảnh bản đồ trên tấm biển đang phát sáng.', dialogue:[{who:'Cải',text:'Kho báu ở đây rồi!'},{who:'Ô Tô Gió Lốc',text:'Quét xung quanh trước nhé. Yên tĩnh quá thường rất… đáng ngáp.'}], voice:'Háo hức nhưng giữ một chút bí ẩn.', alt:'Cải và Ô Tô Gió Lốc phát hiện căn chòi kho báu có biểu tượng bản đồ phát sáng.' },
+    { image:'assets/stories/lazy-forest/page-10.webp', narration:'Bỗng một luồng khói xanh mang mùi chân thối bay tới. Sâu Thối Bủm xuất hiện, đội khăn ngủ và ôm chiếc gối mềm.', dialogue:[{who:'Sâu Thối Bủm',text:'Cháu bé à, ngủ đi cho khỏe. Bản đồ là của ta!'}], voice:'Sâu ngái ngủ, khoe khoang nhưng đáng yêu.', alt:'Sâu Thối Bủm đội khăn ngủ, ôm gối và thả làn khói ru ngủ trước căn chòi.' },
+    { image:'assets/stories/lazy-forest/page-11.webp', narration:'Khói ru ngủ cuộn quanh. Cải ngáp một cái thật dài, hai mí mắt nặng trĩu như đeo hai chiếc ba lô.', dialogue:[{who:'Ô Tô Gió Lốc',text:'Cải ơi, tỉnh lại! Cậu còn một ý tưởng chưa thử mà!'},{who:'Cải',text:'Đúng rồi… để Cải thử lại!'}], voice:'Chậm và lịm dần, rồi sáng lên ở câu cuối.', alt:'Cải buồn ngủ tựa vào Ô Tô Gió Lốc khi Sâu Thối Bủm phóng khói ru ngủ.' },
+    { image:'assets/stories/lazy-forest/page-12.webp', narration:'Cải bấm nút. Đèn Pha Cười Cười bật sáng, phóng ra một luồng ánh vàng đầy những nụ cười nhột nhột.', dialogue:[{who:'Cải',text:'Kích hoạt Đèn Pha Cười Cười!'},{who:'Sâu Thối Bủm',text:'Khục… khục… ha ha ha! Dừng lại, nhột quá!'}], voice:'Khẩu lệnh mạnh, sau đó là tiếng cười bật thành từng nhịp.', alt:'Đèn pha hình mặt cười chiếu ánh vàng khiến Sâu Thối Bủm cười lăn.' },
+    { image:'assets/stories/lazy-forest/page-13.webp', narration:'Sâu cười mất thăng bằng, lùi ba bước rồi “phụp!” vào hố gối bông. Chưa đầy ba giây, chú đã ngáy như sấm.', dialogue:[{who:'Sâu Thối Bủm',text:'Khò… bản đồ… để mai… lấy…'}], voice:'Tiếng “phụp” mềm, sau đó ngáy lớn nhưng dễ thương.', alt:'Sâu Thối Bủm ngủ ngon trong hố đầy gối, còn Cải và Ô Tô Gió Lốc mỉm cười.' },
+    { image:'assets/stories/lazy-forest/page-14.webp', narration:'Trong căn chòi, Cải lật tấm thảm. “A!” Mảnh bản đồ thứ hai bay lên, ghép khít với mảnh đầu tiên.', dialogue:[{who:'Cải',text:'Một cánh cửa giữa lòng đại dương!'},{who:'Loa ba lô',text:'Mảnh thứ ba nằm sâu dưới Biển Bong Bóng!'}], voice:'Kỳ diệu, rồi bí ẩn khi hình cánh cửa dưới biển hiện ra.', alt:'Hai mảnh Bản Đồ Vũ Trụ ghép lại và chiếu hình cánh cửa bí ẩn dưới đại dương.' },
+    { image:'assets/stories/lazy-forest/page-15.webp', narration:'Ô Tô Gió Lốc bung vây lặn và mái vòm bong bóng. Trong cánh cổng biển, cá đang rap còn bạch tuộc gõ trống tưng bừng.', dialogue:[{who:'Loa ba lô',text:'Biển Bong Bóng — nơi cá biết rap và bạch tuộc chơi trống!'},{who:'Cải',text:'Đi thôi, Ô Tô Gió Lốc — lần này ta sẽ lặn!'}], voice:'Nhịp vui như âm nhạc dưới biển; kết thật háo hức.', alt:'Cải và Ô Tô Gió Lốc chuẩn bị lặn qua cánh cổng tới Biển Bong Bóng.' }
+  ]
+};
+
 export const fireflyStory = {
   id: 'firefly-light',
   title: 'Cải và Đêm Đom Đóm Mất Sáng',
@@ -84,9 +113,8 @@ export const fireflyStory = {
 };
 
 export const comingSoon = [
-  { number: '03', title: 'Cuộc Thám Hiểm Rừng Lười Biếng', note: 'Một khu rừng chẳng muốn thức dậy', color: 'blue', icon: '🌲' },
   { number: '04', title: 'Bí Ẩn Biển Bong Bóng', note: 'Những bí mật dưới làn nước', color: 'teal', icon: '🫧' },
   { number: '05', title: 'Thành Phố Ba Lô Nổi Chuyện', note: 'Một bí mật mới đang thức giấc', color: 'amber', icon: '🍎' }
 ];
 
-export const stories = [backpackStory, skyRaceStory, fireflyStory];
+export const stories = [backpackStory, skyRaceStory, lazyForestStory, fireflyStory];
