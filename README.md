@@ -1,8 +1,8 @@
-# Cải & Biệt đội Bủm
+# Chuyện của Cải
 
-Game web phiêu lưu tương tác dành riêng cho Cải, khoảng 6 tuổi. Bản thử có một tập hoàn chỉnh, dùng chuột, chạm hoặc phím Tab/Enter. Không cần cài thư viện, tài khoản hay API key.
+Thư viện truyện tranh toàn màn hình dành riêng cho Cải. Tập đầu, **Cải và Đêm Đom Đóm Mất Sáng**, có 14 trang minh hoạ riêng, hiệu ứng lật trang 3D, kịch bản lồng tiếng theo từng trang và cơ chế nạp file audio để nghe thử ngay trong trình duyệt.
 
-## Chạy
+## Chạy tại máy
 
 Cần Node.js 20 trở lên:
 
@@ -10,35 +10,35 @@ Cần Node.js 20 trở lên:
 npm start
 ```
 
-Mở http://127.0.0.1:4173. Server chỉ nghe trên máy hiện tại. Chưa phát hành ra internet. Các file tĩnh có thể triển khai sau khi gia đình duyệt bản chơi thử.
+Mở <http://127.0.0.1:4173>. Dự án không gọi backend, không quảng cáo và không thu thập dữ liệu.
 
 ```sh
 npm test
 ```
 
-## Nội dung
+## Cách đọc
 
-- `docs/CAI_CHARACTER.md`: hồ sơ nhân vật gốc, dùng để kiểm tra mọi tập sau.
-- `docs/GAME_DESIGN.md`: tư vấn loại game, cốt truyện, mỹ thuật, nhịp chơi, phạm vi và kế hoạch phát triển.
-- `docs/ART_DIRECTION.md`: nguồn ảnh và prompt cảnh mới tạo bằng imagegen tích hợp.
-- `state.js`: trạng thái tập truyện; kiểm tra tiến độ lưu, thứ tự nhiệm vụ và dấu khám phá.
-- `app.js`, `styles.css`, `index.html`: giao diện và trò chơi không phụ thuộc framework.
-- `assets/`: cảnh chơi và ảnh tham chiếu người dùng cung cấp.
+- Bấm **Mở truyện**, chạm hai mép trang, vuốt ngang hoặc dùng phím mũi tên để lật.
+- Bấm **Kịch bản** để xem lời kể, hội thoại và chỉ dẫn giọng của trang hiện tại.
+- Bấm **Giọng đọc → Nạp file thu âm** để chọn một hoặc nhiều file audio. Tên file cần có số trang, ví dụ `page-02.mp3`, `trang_14.wav`.
+- Audio chỉ nằm trong bộ nhớ của phiên trình duyệt; reload trang sẽ cần nạp lại. Cách này phù hợp để duyệt bản thu mà không tải file lên dịch vụ nào.
 
-## Những gì bản thử làm được
+## Thêm audio cố định
 
-Tìm ba món đồ → lắp ba bộ phận đúng thứ tự → thử vòng thở (có thể bỏ qua) → chọn cách đón gió → xe chạy → nhận dấu và kết thúc. Có gợi ý, tạm nghỉ, sổ khám phá, hiệu ứng âm thanh tự tổng hợp, tuỳ chọn đọc lời thoại, góc bố mẹ, chơi lại và lưu tiến độ bằng localStorage.
+Tạo thư mục `assets/audio/firefly/`, đặt các file theo trang, rồi bổ sung đường dẫn vào dữ liệu trong `story-data.js`. Nếu dùng Deepgram để tạo voice, chạy việc tạo audio ở backend hoặc bằng script build cục bộ. Không đặt API key vào `app.js`, `story-data.js` hoặc bất kỳ JavaScript nào được gửi tới trình duyệt.
 
-## Giới hạn cần biết
+## Cấu trúc
 
-- Đây là truyện tương tác trên một tranh nền 3D, chưa phải game điều khiển nhân vật 3D hoặc chạy nhảy tự do.
-- Tập 2 và 3 mới là ý tưởng, được ghi rõ trên giao diện.
-- Thời lượng mục tiêu 5–8 phút tính cả trò chuyện, chưa đo với Cải. Có thể chơi nhanh hơn nhiều.
-- Lời đọc phụ thuộc giọng tiếng Việt trên thiết bị; không tự phát. Nếu không có giọng, giao diện hướng dẫn bố mẹ cùng đọc. Giọng của hệ thống có thể dùng dịch vụ mạng; không có micro hay nhận diện giọng nói.
-- Tiến độ nằm trên trình duyệt hiện tại; không đồng bộ, có thể mất khi xoá dữ liệu. Nếu lưu bị chặn, game vẫn chạy trong phiên đó.
-- Hiện dùng emoji cho chiếc xe chuyển động và hai hình minh họa tập ý tưởng. Đồ họa sản phẩm tiếp theo cần sprite/hoạt ảnh và thu âm nhất quán.
-- Không có analytics, quảng cáo hoặc gọi backend. Các ảnh gốc vẫn nằm trong dự án để tham chiếu. Khi phát hành, chỉ đóng gói những tài sản cần dùng.
+- `story-data.js`: nội dung hiển thị, lời thoại, chỉ dẫn giọng và đường dẫn tranh.
+- `docs/STORY_01_SCRIPT.md`: kịch bản sản xuất đầy đủ theo 14 trang.
+- `docs/CAI_CHARACTER.md`: hồ sơ tính cách gốc của Cải.
+- `assets/stories/firefly/`: 14 tranh WebP, mỗi trang là một cảnh độc lập.
+- `app.js`, `styles.css`: thư viện truyện, trình đọc, lật trang, kịch bản và audio preview.
 
-## Nguồn kỹ thuật
+## Tranh minh hoạ
 
-[MDN: SpeechSynthesis.getVoices](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/getVoices) giải thích danh sách giọng do thiết bị cung cấp.
+14 tranh được tạo bằng công cụ imagegen tích hợp, dùng ảnh Cải làm tham chiếu nhận diện và ảnh phiêu lưu do gia đình cung cấp làm tham chiếu chất lượng/phong cách. Prompt chung và mô tả cảnh từng trang nằm trong `docs/ART_DIRECTION.md` và `docs/STORY_01_SCRIPT.md`.
+
+## Git
+
+Commit `461b8eb` giữ nguyên bản game tương tác đầu tiên. Phiên bản truyện tranh được phát triển sau commit đó để có thể so sánh hoặc quay lại khi cần.

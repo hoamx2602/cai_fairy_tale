@@ -2,27 +2,18 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#244c38">
-  <meta name="description" content="Cùng Cải và Bắp khám phá khu vườn tí hon. Một cuộc phiêu lưu dễ thương, hài hước và đầy những điều bất ngờ.">
-  <title>Cải & Biệt đội Bủm — Khu vườn tí hon</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'%3E%3Crect width='80' height='80' rx='24' fill='%23244c38'/%3E%3Ctext x='15' y='57' font-size='51'%3E🌱%3C/text%3E%3C/svg%3E">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0d1725">
+  <meta name="description" content="Thư viện truyện tranh phiêu lưu của Cải, với những câu chuyện ấm áp, hài hước và đầy tò mò.">
+  <title>Chuyện của Cải</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'%3E%3Crect width='80' height='80' rx='24' fill='%23101d2b'/%3E%3Ctext x='14' y='58' font-size='52'%3E✨%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="styles.css">
   <script type="module" src="app.js"></script>
 </head>
 <body>
-  <a class="skip" href="#main">Đến nội dung</a>
-  <header class="header">
-    <button class="brand" data-action="home" aria-label="Cải và Biệt đội Bủm, trang đầu"><span class="brand-leaf">✿</span><span><b>Cải<span class="brand-amp"> & </span></b><small>BIỆT ĐỘI BỦM</small></span></button>
-    <nav aria-label="Điều hướng chính">
-      <button class="nav-item active" data-action="home">Cuộc phiêu lưu</button>
-      <button class="nav-item" data-action="journal">Sổ khám phá <span class="journal-count">0</span></button>
-    </nav>
-    <div class="header-tools"><button class="sound icon-button" data-action="sound" aria-label="Bật âm thanh" aria-pressed="false"></button><button class="parents-link" data-action="parents" aria-label="Góc bố mẹ"><span class="parent-icon"></span><span>Góc bố mẹ</span></button></div>
-  </header>
-  <main id="main" tabindex="-1"></main>
-  <footer><span>Được làm bằng yêu thương, dành riêng cho Cải <span class="tiny-heart">♡</span></span><span>Những cuộc phiêu lưu nhỏ. Những khám phá thật to.</span></footer>
-  <dialog id="modal" aria-labelledby="modal-title"><div class="modal-inner"></div></dialog>
+  <a class="skip-link" href="#app">Đến nội dung chính</a>
+  <div id="app" tabindex="-1"></div>
+  <input id="audio-files" class="sr-only" type="file" accept="audio/*" multiple>
   <div id="toast" role="status" aria-live="polite"></div>
 </body>
 </html>

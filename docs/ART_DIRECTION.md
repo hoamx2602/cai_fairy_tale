@@ -11,3 +11,14 @@ Use case: illustration-story. Asset type: background for a children's point-and-
 ## Giới hạn
 
 Một tranh nền chung cho bản thử. Bộ phận xe, điểm tương tác, giao diện và chuyển động được dựng trong code; chưa có bộ sprite nhân vật riêng. Các ảnh tham chiếu được giữ trong dự án để phát triển tiếp, không cần đưa ảnh hồ sơ đầy đủ lên bản phát hành công khai.
+
+## Bộ tranh truyện “Đêm Đom Đóm Mất Sáng”
+
+14 tranh tại `assets/stories/firefly/page-01.webp` đến `page-14.webp` được tạo riêng bằng công cụ imagegen tích hợp. Mỗi lượt dùng hai ảnh tham chiếu:
+
+- `assets/references/cai-character.png`: khoá nhận diện khuôn mặt, tóc, áo xanh hình ô tô, quần short, giày và ba lô của Cải.
+- `assets/references/adventure-style.png`: tham chiếu chất lượng 3D storybook, vật liệu mềm, khu vườn tí hon; không sao chép bố cục.
+
+Prompt chung: tranh truyện thiếu nhi toàn màn hình tỉ lệ 3:2, hoạt hình 3D điện ảnh mềm mại; đêm xanh tím cân bằng bằng ánh vàng ấm; biểu cảm rõ; nhân vật lặp lại nhất quán; dành khoảng yên ở phần tư dưới cho lớp chữ HTML; không chữ trong ảnh, logo, UI, viền, watermark, cảnh kinh dị, sinh vật đe doạ, chất bẩn hoặc chất nhầy. Mô tả cảnh cụ thể của từng trang nằm trong `docs/STORY_01_SCRIPT.md`.
+
+PNG tạo ban đầu được chuyển sang WebP chất lượng 84 để toàn bộ 14 trang giảm từ khoảng 32 MB xuống khoảng 2.9 MB, giúp lật trang mượt hơn. Bản PNG gốc vẫn nằm trong thư mục generated_images của Codex; dự án chỉ tham chiếu các bản WebP.
