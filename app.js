@@ -1,5 +1,6 @@
 import { stories, comingSoon } from './story-data.js';
 import { nextPage, restoreProgress, pageNumberFromFilename } from './state.js';
+import { PageFlip } from './node_modules/page-flip/dist/js/page-flip.module.js';
 
 const app = document.querySelector('#app');
 const fileInput = document.querySelector('#audio-files');
@@ -15,7 +16,7 @@ let autoVoice = false;
 let activeAudio = null;
 let audioUrls = new Map();
 let toastTimer;
-let pointerStart = null;
+let pageFlip = null;
 
 const icons = {
   book: '<path d="M4 5c5-2 8 1 8 1s3-3 8-1v14c-5-2-8 1-8 1s-3-3-8-1zM12 6v14"/>',
@@ -62,6 +63,7 @@ function preload() {
 }
 
 function renderLibrary() {
+  destroyFlipBook();
   selectStory(stories[0].id);
   view = 'library';
   document.body.className = 'library-mode';
@@ -110,9 +112,9 @@ function pageMarkup(page, index, className) {
 }
 
 function renderReader() {
+  destroyFlipBook();
   view = 'reader';
   document.body.className = 'reader-mode';
-  const current = story.pages[pageIndex];
   app.innerHTML = `<main class="reader" id="main">
     <div class="reader-chrome top-chrome">
       <button class="circle-button" data-action="library" aria-label="Về thư viện">${icon('home')}</button>
@@ -124,21 +126,75 @@ function renderReader() {
       </div>
     </div>
     <section class="book-stage" aria-live="polite">
-      <div class="page-under"></div>
-      <div class="page-current">${pageMarkup(current, pageIndex, 'front-page')}</div>
-      <button class="tap-zone tap-prev" data-action="prev" aria-label="Trang trước"></button>
-      <button class="tap-zone tap-next" data-action="next" aria-label="Trang sau"></button>
+      <div class="flip-book-shell"><div class="flip-book" id="flip-book">${story.pages.map((page,index)=>pageMarkup(page,index,'flip-page')).join('')}</div></div>
     </section>
     <div class="reader-chrome bottom-chrome">
-      <button class="nav-button" data-action="prev" ${pageIndex === 0 ? 'disabled' : ''}>${icon('back')}<span>Trang trước</span></button>
+      <button class="nav-button" data-action="prev" aria-label="Trang trước" ${pageIndex === 0 ? 'disabled' : ''}>${icon('back')}<span>Trang trước</span></button>
       <div class="page-progress"><div class="progress-track"><span style="width:${((pageIndex + 1) / story.pages.length) * 100}%"></span></div><b>${pageIndex + 1} <i>/</i> ${story.pages.length}</b></div>
-      <button class="nav-button next" data-action="next" ${pageIndex === story.pages.length - 1 ? 'disabled' : ''}><span>Trang sau</span>${icon('arrow')}</button>
+      <button class="nav-button next" data-action="next" aria-label="Trang sau" ${pageIndex === story.pages.length - 1 ? 'disabled' : ''}><span>Trang sau</span>${icon('arrow')}</button>
     </div>
     ${audioPanel()}
     ${scriptDrawer()}
   </main>`;
   bindDrawerState();
   bindAudioState();
+  requestAnimationFrame(initFlipBook);
+}
+
+function destroyFlipBook() {
+  if (!pageFlip) return;
+  try { pageFlip.destroy(); } catch {}
+  pageFlip = null;
+}
+
+function initFlipBook() {
+  const book = document.querySelector('#flip-book');
+  if (!book || view !== 'reader') return;
+  pageFlip = new PageFlip(book, {
+    width: 1200,
+    height: 800,
+    size: 'stretch',
+    minWidth: 300,
+    maxWidth: 1536,
+    minHeight: 200,
+    maxHeight: 1024,
+    startPage: pageIndex,
+    drawShadow: true,
+    flippingTime: matchMedia('(prefers-reduced-motion: reduce)').matches ? 1 : 1050,
+    usePortrait: true,
+    autoSize: true,
+    maxShadowOpacity: 0.62,
+    showCover: false,
+    mobileScrollSupport: true,
+    swipeDistance: 24,
+    showPageCorners: true,
+    disableFlipByClick: true
+  });
+  pageFlip.on('init', () => book.classList.add('is-ready'));
+  pageFlip.on('changeState', event => { turning = event.data === 'flipping' || event.data === 'user_fold'; });
+  pageFlip.on('flip', event => {
+    const nextIndex = Number(event.data);
+    if (!Number.isInteger(nextIndex) || nextIndex === pageIndex) return;
+    stopAudio();
+    pageIndex = nextIndex;
+    if (pageIndex === story.pages.length - 1) completed = true;
+    save();
+    updateReaderChrome();
+    if (autoVoice) setTimeout(playAudio, matchMedia('(prefers-reduced-motion: reduce)').matches ? 20 : 1080);
+  });
+  pageFlip.loadFromHTML(book.querySelectorAll('.book-page'));
+}
+
+function updateReaderChrome() {
+  const counter = document.querySelector('.page-progress b');
+  const bar = document.querySelector('.progress-track span');
+  const prev = document.querySelector('.nav-button[data-action="prev"]');
+  const next = document.querySelector('.nav-button[data-action="next"]');
+  if (counter) counter.innerHTML = `${pageIndex + 1} <i>/</i> ${story.pages.length}`;
+  if (bar) bar.style.width = `${((pageIndex + 1) / story.pages.length) * 100}%`;
+  if (prev) prev.disabled = pageIndex === 0;
+  if (next) next.disabled = pageIndex === story.pages.length - 1;
+  document.querySelector('.book-stage')?.setAttribute('aria-label', `Trang ${pageIndex + 1} trên ${story.pages.length}`);
 }
 
 function currentScriptText() {
@@ -174,26 +230,13 @@ function bindAudioState() {
 }
 
 function go(direction) {
-  if (turning) return;
+  if (turning || !pageFlip) return;
   const target = nextPage(pageIndex, story.pages.length, direction);
   if (target === pageIndex) {
     if (pageIndex === story.pages.length - 1 && direction === 'next') finishStory();
     return;
   }
-  stopAudio();
-  turning = true;
-  const stage = document.querySelector('.book-stage');
-  const under = stage.querySelector('.page-under');
-  under.innerHTML = pageMarkup(story.pages[target], target, 'under-page');
-  stage.classList.add(direction === 'prev' ? 'turn-prev' : 'turn-next');
-  setTimeout(() => {
-    pageIndex = target;
-    if (pageIndex === story.pages.length - 1) completed = true;
-    save();
-    turning = false;
-    renderReader();
-    if (autoVoice) playAudio();
-  }, 760);
+  direction === 'prev' ? pageFlip.flipPrev('top') : pageFlip.flipNext('top');
 }
 
 function finishStory() {
@@ -266,17 +309,6 @@ document.addEventListener('keydown', (event) => {
   if (event.key === 'ArrowRight' || event.key === 'PageDown' || event.key === ' ') { event.preventDefault(); go('next'); }
   if (event.key === 'ArrowLeft' || event.key === 'PageUp') { event.preventDefault(); go('prev'); }
   if (event.key === 'Escape') renderLibrary();
-});
-
-document.addEventListener('pointerdown', (event) => {
-  if (view === 'reader' && !event.target.closest('button, aside')) pointerStart = {x:event.clientX,y:event.clientY};
-});
-document.addEventListener('pointerup', (event) => {
-  if (!pointerStart || view !== 'reader') return;
-  const dx = event.clientX - pointerStart.x;
-  const dy = event.clientY - pointerStart.y;
-  pointerStart = null;
-  if (Math.abs(dx) > 55 && Math.abs(dx) > Math.abs(dy)) go(dx < 0 ? 'next' : 'prev');
 });
 
 document.addEventListener('visibilitychange', () => { if (document.hidden) stopAudio(); });
