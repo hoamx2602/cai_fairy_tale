@@ -1,10 +1,10 @@
-import { story, comingSoon } from './story-data.js';
+import { stories, comingSoon } from './story-data.js';
 import { nextPage, restoreProgress, pageNumberFromFilename } from './state.js';
 
 const app = document.querySelector('#app');
 const fileInput = document.querySelector('#audio-files');
-const KEY = `cai-story:${story.id}`;
-const saved = restoreProgress(localStorage.getItem(KEY), story.pages.length);
+let story = stories[0];
+const saved = restoreProgress(localStorage.getItem(`cai-story:${story.id}`), story.pages.length);
 let view = 'library';
 let pageIndex = saved.page;
 let completed = saved.completed;
@@ -36,8 +36,18 @@ const icons = {
 const icon = (name) => `<svg viewBox="0 0 24 24" aria-hidden="true">${icons[name]}</svg>`;
 
 function save() {
-  localStorage.setItem(KEY, JSON.stringify({ page: pageIndex, completed }));
+  localStorage.setItem(`cai-story:${story.id}`, JSON.stringify({ page: pageIndex, completed }));
 }
+
+function selectStory(id) {
+  story = stories.find(item => item.id === id) || stories[0];
+  const progress = restoreProgress(localStorage.getItem(`cai-story:${story.id}`), story.pages.length);
+  pageIndex = progress.page;
+  completed = progress.completed;
+  stopAudio();
+}
+
+const audioKey = (index = pageIndex) => `${story.id}:${index}`;
 
 function toast(message) {
   const el = document.querySelector('#toast');
@@ -52,6 +62,7 @@ function preload() {
 }
 
 function renderLibrary() {
+  selectStory(stories[0].id);
   view = 'library';
   document.body.className = 'library-mode';
   app.innerHTML = `
@@ -64,12 +75,12 @@ function renderLibrary() {
         <img src="${story.pages[0].image}" alt="${story.pages[0].alt}" fetchpriority="high">
         <div class="featured-shade"></div>
         <div class="featured-copy">
-          <span class="episode-label">TẬP TRUYỆN ĐẦU TIÊN · ${story.pages.length} TRANG</span>
-          <h1 id="featured-title">Cải và Đêm<br><em>Đom Đóm Mất Sáng</em></h1>
+          <span class="episode-label">TẬP 01 · ${story.pages.length} TRANG MINH HOẠ</span>
+          <h1 id="featured-title">Cải và<br><em>${story.shortTitle}</em></h1>
           <p>${story.summary}</p>
           <div class="theme-row">${story.themes.map(t=>`<span>${t}</span>`).join('')}</div>
           <div class="featured-actions">
-            <button class="read-button" data-action="read">${icon('book')} ${pageIndex > 0 && !completed ? `Đọc tiếp · Trang ${pageIndex + 1}` : 'Mở truyện'}</button>
+            <button class="read-button" data-action="read" data-story="${story.id}">${icon('book')} ${pageIndex > 0 && !completed ? `Đọc tiếp · Trang ${pageIndex + 1}` : 'Mở truyện'}</button>
             <button class="ghost-button" data-action="script">${icon('script')} Xem kịch bản lồng tiếng</button>
           </div>
           <div class="story-meta"><span>${story.age}</span><i></i><span>${story.readTime}</span><i></i><span>${story.pages.length} tranh minh hoạ</span></div>
@@ -78,7 +89,7 @@ function renderLibrary() {
       <section class="shelf" aria-labelledby="shelf-title">
         <div class="shelf-heading"><div><span>THƯ VIỆN CỦA CẢI</span><h2 id="shelf-title">Những câu chuyện tiếp theo</h2></div><p>Những chuyến phiêu lưu mới sẽ lần lượt xuất hiện ở đây.</p></div>
         <div class="story-grid">
-          <button class="story-card ready" data-action="read"><div class="card-image"><img src="${story.pages[0].image}" alt=""><span class="ready-tag">ĐỌC NGAY</span></div><div class="card-copy"><small>TẬP 01</small><h3>${story.shortTitle}</h3><p>${story.themes.join(' · ')}</p></div></button>
+          ${stories.map((item,index)=>`<button class="story-card ready" data-action="read" data-story="${item.id}"><div class="card-image"><img src="${item.pages[0].image}" alt=""><span class="ready-tag">ĐỌC NGAY</span></div><div class="card-copy"><small>${index === 0 ? 'TẬP 01' : 'NGOẠI TRUYỆN'}</small><h3>${item.shortTitle}</h3><p>${item.themes.join(' · ')}</p></div></button>`).join('')}
           ${comingSoon.map(item=>`<article class="story-card coming ${item.color}"><div class="coming-art"><span>${item.icon}</span><b>ĐANG VIẾT</b></div><div class="card-copy"><small>TẬP ${item.number}</small><h3>${item.title}</h3><p>${item.note}</p></div></article>`).join('')}
         </div>
       </section>
@@ -93,7 +104,7 @@ function pageMarkup(page, index, className) {
   return `<article class="book-page ${className} ${isCover ? 'cover-page' : ''}" aria-label="Trang ${index + 1} trên ${story.pages.length}">
     <img src="${page.image}" alt="${page.alt}" draggable="false">
     <div class="image-vignette"></div>
-    ${isCover ? `<div class="cover-copy"><span>${story.kicker}</span><h1>Cải và Đêm<br><em>Đom Đóm Mất Sáng</em></h1><p>Một câu chuyện về lòng can đảm,<br>sự bình tĩnh và những người bạn.</p></div>` : `<div class="story-copy"><div class="narration">${page.narration}</div>${page.dialogue.length ? `<div class="dialogue-lines">${page.dialogue.map(d=>`<p><b>${d.who}</b> “${d.text}”</p>`).join('')}</div>` : ''}</div>`}
+    ${isCover ? `<div class="cover-copy"><span>${story.kicker}</span><h1>Cải và<br><em>${story.shortTitle}</em></h1><p>${story.themes.join(' · ')}</p></div>` : `<div class="story-copy"><div class="narration">${page.narration}</div>${page.dialogue.length ? `<div class="dialogue-lines">${page.dialogue.map(d=>`<p><b>${d.who}</b> “${d.text}”</p>`).join('')}</div>` : ''}</div>`}
     <span class="printed-page">${String(index + 1).padStart(2,'0')}</span>
   </article>`;
 }
@@ -105,10 +116,10 @@ function renderReader() {
   app.innerHTML = `<main class="reader" id="main">
     <div class="reader-chrome top-chrome">
       <button class="circle-button" data-action="library" aria-label="Về thư viện">${icon('home')}</button>
-      <div class="reader-title"><small>TẬP 01</small><b>${story.shortTitle}</b></div>
+      <div class="reader-title"><small>${story.seriesNumber ? `TẬP ${story.seriesNumber}` : 'NGOẠI TRUYỆN'}</small><b>${story.shortTitle}</b></div>
       <div class="reader-tools">
-        <button class="tool-button ${audioPanelOpen ? 'active' : ''}" data-action="audio-panel">${icon('sound')}<span>Giọng đọc</span></button>
-        <button class="tool-button ${scriptsOpen ? 'active' : ''}" data-action="script">${icon('script')}<span>Kịch bản</span></button>
+        <button class="tool-button ${audioPanelOpen ? 'active' : ''}" data-action="audio-panel" aria-label="Giọng đọc">${icon('sound')}<span>Giọng đọc</span></button>
+        <button class="tool-button ${scriptsOpen ? 'active' : ''}" data-action="script" aria-label="Kịch bản">${icon('script')}<span>Kịch bản</span></button>
         <button class="circle-button" data-action="fullscreen" aria-label="Toàn màn hình">${icon('expand')}</button>
       </div>
     </div>
@@ -137,15 +148,15 @@ function currentScriptText() {
 
 function scriptDrawer() {
   const p = story.pages[pageIndex];
-  return `<aside class="script-drawer ${scriptsOpen ? 'open' : ''}" aria-hidden="${!scriptsOpen}">
+  return `<aside class="script-drawer ${scriptsOpen ? 'open' : ''}" aria-hidden="${!scriptsOpen}" ${scriptsOpen ? '' : 'hidden inert'}>
     <div class="drawer-head"><div><small>KỊCH BẢN LỒNG TIẾNG</small><h2>${view === 'reader' ? `Trang ${pageIndex + 1}` : story.title}</h2></div><button class="circle-button light" data-action="close-script" aria-label="Đóng kịch bản">${icon('close')}</button></div>
-    ${view === 'reader' ? `<div class="script-page"><span>LỜI KỂ</span><p>${p.narration || 'Đọc tên truyện và dòng phụ.'}</p>${p.dialogue.map(d=>`<blockquote><b>${d.who}</b><p>“${d.text}”</p></blockquote>`).join('')}<div class="voice-note"><b>Chỉ dẫn giọng</b><p>${p.voice}</p></div><button class="copy-button" data-action="copy-script">${icon('copy')} Sao chép trang này</button></div>` : `<div class="script-intro"><p>Toàn bộ lời kể, hội thoại, mô tả cảnh và chỉ dẫn giọng đã được tách theo 14 trang.</p><p>Bạn có thể mở truyện rồi dùng nút <b>Kịch bản</b> ở từng trang, hoặc mở file Markdown đầy đủ trong dự án.</p><button class="read-button compact" data-action="read">${icon('book')} Mở truyện và xem từng trang</button></div>`}
-  </aside><button class="drawer-backdrop ${scriptsOpen ? 'show' : ''}" data-action="close-script" aria-label="Đóng kịch bản"></button>`;
+    ${view === 'reader' ? `<div class="script-page"><span>LỜI KỂ</span><p>${p.narration || 'Đọc tên truyện và dòng phụ.'}</p>${p.dialogue.map(d=>`<blockquote><b>${d.who}</b><p>“${d.text}”</p></blockquote>`).join('')}<div class="voice-note"><b>Chỉ dẫn giọng</b><p>${p.voice}</p></div><button class="copy-button" data-action="copy-script">${icon('copy')} Sao chép trang này</button></div>` : `<div class="script-intro"><p>Toàn bộ lời kể, hội thoại, mô tả cảnh và chỉ dẫn giọng đã được tách theo ${story.pages.length} trang.</p><p>Bạn có thể mở truyện rồi dùng nút <b>Kịch bản</b> ở từng trang, hoặc mở file Markdown đầy đủ trong dự án.</p><button class="read-button compact" data-action="read" data-story="${story.id}">${icon('book')} Mở truyện và xem từng trang</button></div>`}
+  </aside><button class="drawer-backdrop ${scriptsOpen ? 'show' : ''}" data-action="close-script" aria-label="Đóng kịch bản" ${scriptsOpen ? '' : 'hidden'}></button>`;
 }
 
 function audioPanel() {
-  const hasAudio = audioUrls.has(pageIndex);
-  return `<aside class="audio-panel ${audioPanelOpen ? 'open' : ''}" aria-hidden="${!audioPanelOpen}">
+  const hasAudio = audioUrls.has(audioKey());
+  return `<aside class="audio-panel ${audioPanelOpen ? 'open' : ''}" aria-hidden="${!audioPanelOpen}" ${audioPanelOpen ? '' : 'hidden inert'}>
     <div><small>GIỌNG ĐỌC · TRANG ${pageIndex + 1}</small><b>${hasAudio ? 'Đã có file âm thanh' : 'Chưa có giọng đọc'}</b></div>
     ${hasAudio ? `<button class="audio-play" data-action="play-audio">${activeAudio && !activeAudio.paused ? icon('pause') : icon('sound')} ${activeAudio && !activeAudio.paused ? 'Tạm dừng' : 'Nghe trang này'}</button>` : `<button class="audio-play" data-action="pick-audio">${icon('upload')} Nạp file thu âm</button>`}
     <label class="auto-voice"><input type="checkbox" data-action="auto-voice" ${autoVoice ? 'checked' : ''}><span>Tự đọc khi lật trang</span></label>
@@ -196,7 +207,7 @@ function stopAudio() {
 }
 
 function playAudio() {
-  const src = audioUrls.get(pageIndex);
+  const src = audioUrls.get(audioKey());
   if (!src) { if (autoVoice) toast(`Trang ${pageIndex + 1} chưa có file giọng đọc.`); return; }
   if (activeAudio && !activeAudio.paused) { activeAudio.pause(); renderReader(); return; }
   stopAudio();
@@ -210,9 +221,10 @@ function loadAudioFiles(files) {
   for (const file of files) {
     const index = pageNumberFromFilename(file.name, story.pages.length);
     if (index === null) continue;
-    const old = audioUrls.get(index);
+    const key = audioKey(index);
+    const old = audioUrls.get(key);
     if (old) URL.revokeObjectURL(old);
-    audioUrls.set(index, URL.createObjectURL(file));
+    audioUrls.set(key, URL.createObjectURL(file));
     count++;
   }
   toast(count ? `Đã nạp giọng đọc cho ${count} trang trong phiên này.` : 'Không nhận ra số trang trong tên file. Ví dụ: page-02.mp3');
@@ -229,7 +241,7 @@ document.addEventListener('click', async (event) => {
   const button = event.target.closest('[data-action]');
   if (!button || button.disabled) return;
   const action = button.dataset.action;
-  if (action === 'read') { scriptsOpen = false; renderReader(); preload(); }
+  if (action === 'read') { selectStory(button.dataset.story || story.id); scriptsOpen = false; renderReader(); preload(); }
   if (action === 'library') { stopAudio(); scriptsOpen = false; audioPanelOpen = false; renderLibrary(); }
   if (action === 'next' || action === 'prev') go(action);
   if (action === 'script') { scriptsOpen = !scriptsOpen; if (view === 'reader') renderReader(); else renderLibrary(); }

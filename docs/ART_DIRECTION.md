@@ -22,3 +22,11 @@ Một tranh nền chung cho bản thử. Bộ phận xe, điểm tương tác, g
 Prompt chung: tranh truyện thiếu nhi toàn màn hình tỉ lệ 3:2, hoạt hình 3D điện ảnh mềm mại; đêm xanh tím cân bằng bằng ánh vàng ấm; biểu cảm rõ; nhân vật lặp lại nhất quán; dành khoảng yên ở phần tư dưới cho lớp chữ HTML; không chữ trong ảnh, logo, UI, viền, watermark, cảnh kinh dị, sinh vật đe doạ, chất bẩn hoặc chất nhầy. Mô tả cảnh cụ thể của từng trang nằm trong `docs/STORY_01_SCRIPT.md`.
 
 PNG tạo ban đầu được chuyển sang WebP chất lượng 84 để toàn bộ 14 trang giảm từ khoảng 32 MB xuống khoảng 2.9 MB, giúp lật trang mượt hơn. Bản PNG gốc vẫn nằm trong thư mục generated_images của Codex; dự án chỉ tham chiếu các bản WebP.
+
+## Bộ tranh “Thành Phố Ba Lô”
+
+15 tranh tại `assets/stories/backpack-city/page-01.webp` đến `page-15.webp` được tạo riêng bằng imagegen tích hợp từ ảnh nhận diện của Cải và ảnh tham chiếu chất lượng do gia đình cung cấp. Hệ hình ảnh dùng xanh cobalt, đỏ san hô, vàng nắng và xanh ngọc; thành phố được xây từ ba lô, dây đai, khoá bấm và nhãn tên.
+
+Các trang khoá rõ danh sách nhân vật được phép xuất hiện để tránh nhân vật vào truyện trước lúc được giới thiệu. Thị trưởng Dây Kéo luôn là ba lô đỏ bo tròn với ria dây kéo vàng và huy hiệu sao. Sâu Thối Bủm là sâu xanh ô-liu tròn, ngái ngủ và hài hước; khói được thể hiện bằng hình gối/ngáp mềm mại, không dùng chất nhầy hoặc hình ảnh ghê.
+
+PNG tạo ban đầu được chuyển sang WebP chất lượng 84; cả 15 trang chiếm khoảng 2.8 MB trong dự án. Mô tả cảnh và chỉ dẫn giọng nằm trong `docs/STORY_BACKPACK_CITY.md`.
