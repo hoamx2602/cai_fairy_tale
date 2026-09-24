@@ -27,6 +27,35 @@ export const backpackStory = {
   ]
 };
 
+export const skyRaceStory = {
+  id: 'sky-race',
+  seriesNumber: '02',
+  title: 'Cải và Cuộc Đua Xe Bay Trên Lồng Mây',
+  shortTitle: 'Cuộc Đua Xe Bay Trên Lồng Mây',
+  kicker: 'Tập 02 · Truyện cổ tích cho Cải',
+  summary: 'Một tấm vé phát sáng đưa Cải và Ô Tô Gió Lốc tới đường đua trên mây, nơi sự nhanh trí và lòng can đảm có giá trị hơn mọi trò chơi xấu.',
+  age: '4–8 tuổi',
+  readTime: '8–12 phút',
+  themes: ['Nhanh trí', 'Can đảm', 'Chơi đẹp'],
+  pages: [
+    { image:'assets/stories/sky-race/page-01.webp', title:'Cải và Cuộc Đua Xe Bay Trên Lồng Mây', subtitle:'Tập 02 · Truyện cổ tích cho Cải', narration:'', dialogue:[], voice:'Nhanh, sáng và có cảm giác một cuộc đua lớn sắp bắt đầu.', alt:'Cải lái Ô Tô Gió Lốc qua vòng mây, phía sau là Sâu Thối Bủm cùng những chiếc xe vui nhộn.' },
+    { image:'assets/stories/sky-race/page-02.webp', narration:'Sáng hôm sau, khi Cải đang đánh răng, tiếng “bíp bíp!” bỗng vang lên từ phòng ngủ.', dialogue:[{who:'Cải',text:'Ba lô lại gọi mình à?'}], voice:'Nhẹ và hài; giữ tiếng bíp rõ ràng.', alt:'Cải cầm bàn chải, nghe tiếng bíp từ chiếc ba lô phát sáng ngoài cửa phòng tắm.' },
+    { image:'assets/stories/sky-race/page-03.webp', narration:'Cải vừa mở ngăn chính, một chiếc vé phát sáng bay vèo ra, lượn quanh phòng như chim giấy.', dialogue:[{who:'Chiếc vé',text:'Thư mời đặc biệt: Cuộc Đua Xe Bay Trên Lồng Mây. Giải thưởng: Một mảnh Bản Đồ Vũ Trụ!'},{who:'Cải',text:'Bản Đồ Vũ Trụ? Đi thôi!'}], voice:'Trang trọng ở lời mời, rồi reo vui.', alt:'Cải đuổi theo chiếc vé phát sáng đang bay quanh phòng.' },
+    { image:'assets/stories/sky-race/page-04.webp', narration:'Chiếc ô tô đồ chơi trên kệ phát sáng, phóng xuống sàn rồi lớn dần thành Ô Tô Gió Lốc.', dialogue:[{who:'Ô Tô Gió Lốc',text:'Động cơ gió đã sẵn sàng!'},{who:'Cải',text:'Cậu nói được nữa à?'}], voice:'Âm thanh cơ khí vui; giọng xe nhanh và tự tin.', alt:'Chiếc ô tô đồ chơi biến thành Ô Tô Gió Lốc trước đôi mắt ngạc nhiên của Cải.' },
+    { image:'assets/stories/sky-race/page-05.webp', narration:'Chỉ một cú vút, Cải đã tới Lồng Mây — đường đua bồng bềnh giữa những đảo trời.', dialogue:[], voice:'Mở rộng, choáng ngợp.', alt:'Cải và Ô Tô Gió Lốc đáp xuống đường đua mây giữa những đảo trời.' },
+    { image:'assets/stories/sky-race/page-06.webp', narration:'Xe chuối bay, xe bánh mì nướng và cả xe toilet phản lực đang xếp hàng.', dialogue:[{who:'Cải',text:'Cuộc đua này vui thật đấy!'}], voice:'Liệt kê nhanh, dừng một nhịp hài ở toilet phản lực.', alt:'Cải đứng cùng xe chuối, xe bánh mì và xe toilet phản lực tại vạch xuất phát.' },
+    { image:'assets/stories/sky-race/page-07.webp', narration:'Một chiếc xe tím-xanh khục khặc tiến tới. Sau tay lái là Sâu Thối Bủm — hắn đã trốn khỏi túi niêm phong!', dialogue:[{who:'Sâu Thối Bủm',text:'Ta sẽ cho cháu biết mùi thất bại!'},{who:'Cải',text:'Lại là chú sâu hay chơi xấu!'}], voice:'Sâu khoa trương nhưng buồn cười, không đe doạ nặng.', alt:'Sâu Thối Bủm đeo kính phi công, lái Xe Hôi Hám tới thách đấu Cải.' },
+    { image:'assets/stories/sky-race/page-08.webp', narration:'Ba… hai… một! Tiếng còi vang. Hàng chục xe bay lao khỏi vạch, để lại những dải màu trên trời.', dialogue:[{who:'Cải',text:'Gió Lốc, mình bay thôi!'}], voice:'Đếm chậm rồi tăng tốc đột ngột.', alt:'Ô Tô Gió Lốc tăng tốc giữa đoàn xe bay vừa rời vạch xuất phát.' },
+    { image:'assets/stories/sky-race/page-09.webp', narration:'Xe Hôi Hám nhả từng làn khói xanh. Các tay đua chóng mặt; vài chiếc trượt khỏi đường mây nhưng được đệm mây an toàn đỡ lại.', dialogue:[{who:'Ô Tô Gió Lốc',text:'Cảnh báo! Tầm nhìn bằng… không!'}], voice:'Căng thẳng vừa phải, nhấn sự an toàn của những đệm mây.', alt:'Khói xanh tràn đường đua khiến các xe chao đảo trên những đệm mây an toàn.' },
+    { image:'assets/stories/sky-race/page-10.webp', narration:'Cải bật Gương Cười Không Khí. Mặt gương cong lên như đang cười rồi phản chiếu luồng khói trở lại.', dialogue:[{who:'Cải',text:'Chơi xấu thì tự ngửi nhé!'}], voice:'Cải nhanh trí và tinh nghịch.', alt:'Chiếc gương vàng tạo vòng gió sáng, đẩy làn khói xanh trở lại Xe Hôi Hám.' },
+    { image:'assets/stories/sky-race/page-11.webp', narration:'Sâu Thối Bủm ho sặc sụa. Xe mất lái, xoay ba vòng rồi “phụp!” vào đám mây mềm như bún bò.', dialogue:[{who:'Sâu Thối Bủm',text:'Ai tắt đường đua đi được không?'}], voice:'Rượt đuổi nhanh rồi kết bằng tiếng “phụp” tròn và mềm.', alt:'Sâu Thối Bủm và chiếc xe cắm an toàn vào đám mây mềm như những sợi bún.' },
+    { image:'assets/stories/sky-race/page-12.webp', narration:'Ngay vòng cuối, một cơn lốc bất ngờ chắn ngang Lồng Mây. Những chiếc xe khác phải quay đầu.', dialogue:[{who:'Ô Tô Gió Lốc',text:'Gió quá mạnh! Mình cần thêm lực nâng!'}], voice:'Hạ thấp và căng, chừa khoảng dừng trước quyết định.', alt:'Cải bình tĩnh quan sát cơn lốc khổng lồ chắn giữa vòng mây.' },
+    { image:'assets/stories/sky-race/page-13.webp', narration:'Hai cánh ánh sáng bung khỏi thân xe. Ô Tô Gió Lốc lượn quanh cơn lốc rồi vèo qua cổng đích.', dialogue:[{who:'Cải',text:'Kích hoạt Cánh Sao Chổi!'}], voice:'Khẩu lệnh dứt khoát; cao trào âm nhạc rực rỡ.', alt:'Ô Tô Gió Lốc bung đôi cánh vàng, vẽ quỹ đạo sao chổi quanh cơn lốc.' },
+    { image:'assets/stories/sky-race/page-14.webp', narration:'Tiếng vỗ tay vang rền bầu trời. Một mảnh bản đồ tím thẫm bay xuống tay Cải.', dialogue:[{who:'Mảnh bản đồ',text:'Tập hợp đủ 5 mảnh để mở Cổng Vũ Trụ Ba Lô.'},{who:'Cải',text:'Những mảnh còn lại ở đâu nhỉ?'}], voice:'Chiến thắng ấm áp, rồi bí ẩn ở thông điệp.', alt:'Cải nhận mảnh Bản Đồ Vũ Trụ trên bục mây giữa tiếng reo hò.' },
+    { image:'assets/stories/sky-race/page-15.webp', narration:'Thị trưởng Dây Kéo bay tới trên một chiếc ba lô tên lửa.', dialogue:[{who:'Thị trưởng',text:'Mảnh tiếp theo nằm ở nơi chẳng ai muốn tới… Rừng Lười Biếng!'},{who:'Cải',text:'Đi luôn chú ơi!'}], voice:'Bí ẩn ở tên khu rừng; Cải trả lời nhanh, sáng và quyết đoán.', alt:'Thị trưởng Dây Kéo giao nhiệm vụ mới cho Cải trên bầu trời hoàng hôn.' }
+  ]
+};
+
 export const fireflyStory = {
   id: 'firefly-light',
   title: 'Cải và Đêm Đom Đóm Mất Sáng',
@@ -55,9 +84,9 @@ export const fireflyStory = {
 };
 
 export const comingSoon = [
-  { number: '02', title: 'Cuộc Đua Xe Bay Trên Lồng Mây', note: 'Chuyến phiêu lưu tiếp theo của Cải', color: 'amber', icon: '🏎️' },
   { number: '03', title: 'Cuộc Thám Hiểm Rừng Lười Biếng', note: 'Một khu rừng chẳng muốn thức dậy', color: 'blue', icon: '🌲' },
-  { number: '04', title: 'Bí Ẩn Biển Bong Bóng', note: 'Những bí mật dưới làn nước', color: 'teal', icon: '🫧' }
+  { number: '04', title: 'Bí Ẩn Biển Bong Bóng', note: 'Những bí mật dưới làn nước', color: 'teal', icon: '🫧' },
+  { number: '05', title: 'Thành Phố Ba Lô Nổi Chuyện', note: 'Một bí mật mới đang thức giấc', color: 'amber', icon: '🍎' }
 ];
 
-export const stories = [backpackStory, fireflyStory];
+export const stories = [backpackStory, skyRaceStory, fireflyStory];

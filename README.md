@@ -1,6 +1,6 @@
 # Chuyện của Cải
 
-Thư viện truyện tranh toàn màn hình dành riêng cho Cải. Thư viện hiện có **Cải và Thành Phố Ba Lô** (15 trang, mở đầu series của gia đình) và ngoại truyện **Cải và Đêm Đom Đóm Mất Sáng** (14 trang). Mỗi truyện có hiệu ứng lật trang 3D, kịch bản lồng tiếng theo từng trang và cơ chế nạp file audio để nghe thử ngay trong trình duyệt.
+Thư viện truyện tranh toàn màn hình dành riêng cho Cải. Thư viện hiện có **Cải và Thành Phố Ba Lô** (Tập 01), **Cuộc Đua Xe Bay Trên Lồng Mây** (Tập 02), mỗi tập 15 trang, và ngoại truyện **Cải và Đêm Đom Đóm Mất Sáng** (14 trang). Mỗi truyện có hiệu ứng lật trang 3D, kịch bản lồng tiếng theo từng trang và cơ chế nạp file audio để nghe thử ngay trong trình duyệt.
 
 ## Chạy tại máy
 
@@ -31,15 +31,17 @@ Tạo thư mục `assets/audio/firefly/`, đặt các file theo trang, rồi b�
 
 - `story-data.js`: danh sách truyện, nội dung hiển thị, lời thoại, chỉ dẫn giọng và đường dẫn tranh.
 - `docs/STORY_BACKPACK_CITY.md`: kịch bản sản xuất Tập 01 theo 15 trang.
+- `docs/STORY_SKY_RACE.md`: kịch bản sản xuất Tập 02 theo 15 trang.
 - `docs/STORY_01_SCRIPT.md`: kịch bản ngoại truyện Đom Đóm theo 14 trang.
 - `docs/CAI_CHARACTER.md`: hồ sơ tính cách gốc của Cải.
 - `assets/stories/backpack-city/`: 15 tranh WebP của Thành Phố Ba Lô.
+- `assets/stories/sky-race/`: 15 tranh WebP của Cuộc Đua Xe Bay.
 - `assets/stories/firefly/`: 14 tranh WebP của ngoại truyện Đom Đóm.
 - `app.js`, `styles.css`: thư viện truyện, trình đọc, lật trang, kịch bản và audio preview.
 
 ## Tranh minh hoạ
 
-Các bộ tranh được tạo bằng công cụ imagegen tích hợp, dùng ảnh Cải làm tham chiếu nhận diện và ảnh phiêu lưu do gia đình cung cấp làm tham chiếu chất lượng/phong cách. Prompt chung và mô tả cảnh từng trang nằm trong `docs/ART_DIRECTION.md` và hai file kịch bản.
+Các bộ tranh được tạo bằng công cụ imagegen tích hợp, dùng ảnh Cải làm tham chiếu nhận diện và ảnh phiêu lưu do gia đình cung cấp làm tham chiếu chất lượng/phong cách. Prompt chung và mô tả cảnh từng trang nằm trong `docs/ART_DIRECTION.md` và các file kịch bản.
 
 ## Git
 

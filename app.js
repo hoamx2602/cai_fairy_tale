@@ -89,7 +89,7 @@ function renderLibrary() {
       <section class="shelf" aria-labelledby="shelf-title">
         <div class="shelf-heading"><div><span>THƯ VIỆN CỦA CẢI</span><h2 id="shelf-title">Những câu chuyện tiếp theo</h2></div><p>Những chuyến phiêu lưu mới sẽ lần lượt xuất hiện ở đây.</p></div>
         <div class="story-grid">
-          ${stories.map((item,index)=>`<button class="story-card ready" data-action="read" data-story="${item.id}"><div class="card-image"><img src="${item.pages[0].image}" alt=""><span class="ready-tag">ĐỌC NGAY</span></div><div class="card-copy"><small>${index === 0 ? 'TẬP 01' : 'NGOẠI TRUYỆN'}</small><h3>${item.shortTitle}</h3><p>${item.themes.join(' · ')}</p></div></button>`).join('')}
+          ${stories.map(item=>`<button class="story-card ready" data-action="read" data-story="${item.id}"><div class="card-image"><img src="${item.pages[0].image}" alt=""><span class="ready-tag">ĐỌC NGAY</span></div><div class="card-copy"><small>${item.seriesNumber ? `TẬP ${item.seriesNumber}` : 'NGOẠI TRUYỆN'}</small><h3>${item.shortTitle}</h3><p>${item.themes.join(' · ')}</p></div></button>`).join('')}
           ${comingSoon.map(item=>`<article class="story-card coming ${item.color}"><div class="coming-art"><span>${item.icon}</span><b>ĐANG VIẾT</b></div><div class="card-copy"><small>TẬP ${item.number}</small><h3>${item.title}</h3><p>${item.note}</p></div></article>`).join('')}
         </div>
       </section>

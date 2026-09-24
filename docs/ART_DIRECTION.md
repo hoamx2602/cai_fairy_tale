@@ -30,3 +30,11 @@ PNG tạo ban đầu được chuyển sang WebP chất lượng 84 để toàn 
 Các trang khoá rõ danh sách nhân vật được phép xuất hiện để tránh nhân vật vào truyện trước lúc được giới thiệu. Thị trưởng Dây Kéo luôn là ba lô đỏ bo tròn với ria dây kéo vàng và huy hiệu sao. Sâu Thối Bủm là sâu xanh ô-liu tròn, ngái ngủ và hài hước; khói được thể hiện bằng hình gối/ngáp mềm mại, không dùng chất nhầy hoặc hình ảnh ghê.
 
 PNG tạo ban đầu được chuyển sang WebP chất lượng 84; cả 15 trang chiếm khoảng 2.8 MB trong dự án. Mô tả cảnh và chỉ dẫn giọng nằm trong `docs/STORY_BACKPACK_CITY.md`.
+
+## Bộ tranh “Cuộc Đua Xe Bay Trên Lồng Mây”
+
+15 tranh tại `assets/stories/sky-race/page-01.webp` đến `page-15.webp` được tạo riêng bằng imagegen tích hợp, dùng ảnh Cải làm tham chiếu nhận diện. Hệ hình ảnh tiếp nối Tập 01 nhưng mở rộng lên một đường đua mây rực rỡ: Ô Tô Gió Lốc xanh cobalt, turbine bạc-xanh, Cánh Sao Chổi vàng-trắng; Sâu Thối Bủm và Xe Hôi Hám tím-xanh giữ vẻ láu cá, hài hước và an toàn với trẻ nhỏ.
+
+Prompt chung yêu cầu tranh truyện thiếu nhi 3D điện ảnh tỉ lệ 3:2, ánh sáng ban ngày trong trẻo, biểu cảm rõ, cảm giác tốc độ vui, không chữ trong ảnh và dành vùng yên ở phần dưới cho lớp chữ HTML. Các cảnh nguy hiểm đều có đệm mây an toàn; khói hôi dùng hình xoắn xanh ngọc, không có chất bẩn hoặc hình ảnh ghê. Mô tả cảnh và chỉ dẫn giọng từng trang nằm trong `docs/STORY_SKY_RACE.md`.
+
+PNG tạo ban đầu được chuyển sang WebP chất lượng 84; cả 15 trang chiếm khoảng 3 MB trong dự án để việc chuyển trang vẫn mượt trên trình duyệt.
